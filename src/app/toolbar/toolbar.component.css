@@ -1,0 +1,19 @@
+.contenedorToolBar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 15vh;
+}
+
+.iconAngular{
+    width: 100px;
+}
+.titulo{
+    border-bottom: 2px solid red;
+    
+}
