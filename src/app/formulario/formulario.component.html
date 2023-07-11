@@ -1,0 +1,37 @@
+<div class="formulario">
+
+  <form [formGroup]="userModel">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Dirección Email</label>
+      <input 
+      formControlName="email"
+      type="email" 
+      class="form-control" 
+      [class.is-invalid]="emailControl.touched && emailControl.invalid"
+      id="exampleInputEmail1">
+      <div class="invalid-feedback">
+        El campo requiere una direccion valida
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+      <input 
+      formControlName="password"
+        type="password" 
+        class="form-control" 
+        [class.is-invalid]="passwordControl.touched &&  passwordControl.invalid" 
+        id="exampleInputPassword1">
+        <div class="invalid-feedback">
+          El campo contiene menos de 6 characters
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="Reset" class="btn btn-primary" value="Borrar todo">Limpiar formulario</button>
+    </form>
+    <div>
+    </div>
+    <pre>
+      {{ userModel.value | json}}
+    </pre>
+  </div>
+  
